@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  bms:
+    image: basemaps-server
+    command:
+      - --config
+      - /config
+    volumes:
+      - /home/blacha/tmp/basemaps-docker/config:/config
+      - /home/blacha/tmp/basemaps-docker/tiffs/:/home/blacha/tmp/basemaps-docker/tiffs/
+    expose:
+      - "5000"
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - bms
+    ports:
+      - "4000:4000"

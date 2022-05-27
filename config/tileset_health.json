@@ -1,0 +1,15 @@
+{
+  "type": "raster",
+  "id": "ts_aerial",
+  "background": "dce9edff",
+  "layers": [
+    {
+      "3857": "/home/blacha/tmp/basemaps-docker/tiffs/gebco_2021_305-75m/gebco_2021_305-75m_01G1735WKA6J8M24914Y16MSWY",
+      "name": "gebco_2020_305-75m"
+    },
+    {
+      "3857": "/home/blacha/tmp/basemaps-docker/tiffs/waipa_urban_2021_0-1m_RGB/01G28WC5349Y0J3CGWGTZ796DD",
+      "name": "waipa_urban_2021_0-1m_RGB"
+    }
+  ]
+}
